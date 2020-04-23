@@ -13,6 +13,7 @@ This is the Role Permission System.
   - php artisan key:generate
   - env file change your database name
   - php artisan migrate
+  - php artisan db:seed // admin create
   - php artisan serve
 
 
