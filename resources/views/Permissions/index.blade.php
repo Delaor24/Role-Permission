@@ -31,6 +31,31 @@
                         <tr>
                         
                           <td>{{$permission->role->roleName}}</td>
+                          <td>
+                             @if(isset($permission->permission['role']['list'])) <span class="badge badge-success">role view</span>@endif
+
+                             @if(isset($permission->permission['role']['add'])) <span class="badge badge-success">add role</span>@endif
+
+                             @if(isset($permission->permission['role']['edit'])) <span class="badge badge-success">edit role</span>@endif
+
+                             @if(isset($permission->permission['role']['edit'])) <span class="badge badge-success">edit role</span>@endif
+
+                               @if(isset($permission->permission['permission']['list'])) <span class="badge badge-success">permission view</span>@endif
+
+                             @if(isset($permission->permission['permission']['add'])) <span class="badge badge-success">add permission</span>@endif
+
+                             @if(isset($permission->permission['permission']['edit'])) <span class="badge badge-success">edit permission</span>@endif
+
+                             @if(isset($permission->permission['permission']['edit'])) <span class="badge badge-success">edit permission</span>@endif
+
+                               @if(isset($permission->permission['user']['list'])) <span class="badge badge-success">user view</span>@endif
+
+                             @if(isset($permission->permission['user']['add'])) <span class="badge badge-success">add user</span>@endif
+
+                             @if(isset($permission->permission['user']['edit'])) <span class="badge badge-success">edit user</span>@endif
+
+                             @if(isset($permission->permission['user']['edit'])) <span class="badge badge-success">edit user</span>@endif
+                           </td>
                            @isset(Auth::user()->role->permission->permission['permission']['edit'])
                           <td colspan="1">
                             <a href="{{route('permission.edit',$permission)}}" class="btn btn-sm btn-info ">Edit</a>
